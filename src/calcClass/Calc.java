@@ -68,6 +68,7 @@ public class Calc {
 			if (!(op == 'a' || op == 'b')) {
 				System.err.println("Invalid Operator. Please choose only A or B ");
 			}
+			
 		}else
 			{
 			scanner = new Scanner(System.in);
@@ -81,21 +82,20 @@ public class Calc {
 			
 			if (operation == '+') {
 				sumA = sumA + num2;
-				System.out.println(sumA + " + " + num2 + " = " + (sumA));
-
+				System.out.println("The new sum is " + (sumA));
 			}
 
 			if (operation == '-') {
 				sumA = sumA - num2;
-				System.out.println(sumA + " - " + num2 + " = " + (sumA));
+				System.out.println("The new sum is " +(sumA));
 			}
 			if (operation == '*') {
 				sumA = sumA * num2;
-				System.out.println(sumA + " * " + num2 + " = " + (sumA));
+				System.out.println("The new sum is " +(sumA));
 			}
 			if (operation == '/') {
 				sumA = sumA / num2;
-				System.out.println(sumA + " / " + num2 + " = " + (sumA));
+				System.out.println("The new sum is " +(sumA));
 			}
 			
 			}
