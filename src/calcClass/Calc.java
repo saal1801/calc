@@ -6,6 +6,18 @@ public class Calc {
 
 	public static void main(String[] args) {
 		
+		boolean status = true;
+	    while(status){
+		
+		System.out.println("A or B");
+		
+		Scanner sca = new Scanner (System.in);
+		char op = sca.next().charAt(0);
+		
+		if (!(op == 'a' || op == 'b' )) {
+			System.err.println("Invalid Operator. Please use only A or B ");	
+		}
+		
 		System.out.println("Following operations are supported : \n" +
 				  "1. Addition (+) \n" +
 				  "2. Subtraction (-) \n" +
@@ -23,6 +35,7 @@ public class Calc {
 		
 		if (!(operation == '+' || operation == '-' ||operation == '*' ||operation == '/')) {
 			System.err.println("Invalid Operator. Please use only + or - or * or /");
+			
 		}
 		
 		/*if(!(operation == '/' && num2 == 0.0)) {
@@ -42,6 +55,6 @@ public class Calc {
 			System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
 		}
 
+	   }
 	}
-
 }
