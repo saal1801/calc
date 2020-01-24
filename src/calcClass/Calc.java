@@ -7,6 +7,7 @@ public class Calc {
 	public static void main(String[] args) {
 
 		int sumA = 0;
+		int sumB = 0;
 		boolean status = true;
 		while (status) {
 
@@ -15,13 +16,16 @@ public class Calc {
 
 			System.out.println("Following operations are supported : \n" + "1. Addition (+) \n"
 					+ "2. Subtraction (-) \n" + "3. Multiplication (*) \n" + "4. Division (/) \n");
-
-			Scanner scanner = new Scanner(System.in);
+			
+			Scanner scanner ;
+			if(sumA<=1) {
+			scanner = new Scanner(System.in);
 			char operation = scanner.next().charAt(0);
-
+			
 			System.out.print("Enter the first number: ");
 			int num1 = scanner.nextInt();
-
+			
+			
 			System.out.print("Enter the second number: ");
 			int num2 = scanner.nextInt();
 
@@ -29,6 +33,7 @@ public class Calc {
 				System.err.println("Invalid Operator. Please use only + or - or * or / or Please choose only A or B");
 
 			}
+			
 
 			/*
 			 * if(!(operation == '/' && num2 == 0.0)) {
@@ -63,8 +68,37 @@ public class Calc {
 			if (!(op == 'a' || op == 'b')) {
 				System.err.println("Invalid Operator. Please choose only A or B ");
 			}
+		}else
+			{
+			scanner = new Scanner(System.in);
+			char operation = scanner.next().charAt(0);
+			
+			System.out.println("The first number: "+ sumA);
+			
+			
+			System.out.print("Enter the second number: ");
+			int num2 = scanner.nextInt();
+			
+			if (operation == '+') {
+				sumA = sumA + num2;
+				System.out.println(sumA + " + " + num2 + " = " + (sumA));
 
-			System.out.println(sumA);
+			}
+
+			if (operation == '-') {
+				sumA = sumA - num2;
+				System.out.println(sumA + " - " + num2 + " = " + (sumA));
+			}
+			if (operation == '*') {
+				sumA = sumA * num2;
+				System.out.println(sumA + " * " + num2 + " = " + (sumA));
+			}
+			if (operation == '/') {
+				sumA = sumA / num2;
+				System.out.println(sumA + " / " + num2 + " = " + (sumA));
+			}
+			
+			}
 
 //		if(op == 'a') {
 //		 for(int i= 0; i<num1; i++) //loops as many times as num1 (if num1 is 3 then it loops 3 times)
